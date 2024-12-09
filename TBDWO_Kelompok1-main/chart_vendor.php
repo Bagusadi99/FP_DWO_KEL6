@@ -1,25 +1,26 @@
 <div class="container-fluid px-4">
-                        <h1 class="mt-4">Grafik Pegawai</h1>
+                        <h1 class="mt-4">Grafik Vendor</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item"><a href="index.php">Pegawai</a></li>
-                            <li class="breadcrumb-item active">Grafik Pegawai</li>
+                            <li class="breadcrumb-item"><a href="index.php">Vendor</a></li>
+                            <li class="breadcrumb-item active">Grafik Vendor</li>
                         </ol>
                         <div class="card mb-4">
                         </div>
 
-						<?php
+                        <?php
 $link = mysqli_connect("localhost", "root", "");
 mysqli_select_db($link, "fpdwo");
 
 $test = array();
 $count = 0;
 
-$res = mysqli_query($link, "SELECT Name, TotalDue FROM salesperson sp JOIN fact_sales fs ON sp.SalesPersonID=fs.SalesPersonID ORDER BY TotalDue DESC;");
+$res = mysqli_query($link, "SELECT Name, COUNT(PurchaseOrderID) AS Total FROM shipmethod sm JOIN fact_purchasing fp ON sm.ShipMethodID=fp.ShipMethodID GROUP BY Name ORDER BY Total ASC;");
 while($row=mysqli_fetch_array($res)) {
   $test[$count]["label"]=$row["Name"];
-  $test[$count]["y"]=$row["TotalDue"];
+  $test[$count]["y"]=$row["Total"];
   $count=$count+1;
 }
+
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -28,17 +29,14 @@ while($row=mysqli_fetch_array($res)) {
 window.onload = function() {
  
 var chart = new CanvasJS.Chart("chartContainer", {
-	theme: "light2",
 	animationEnabled: true,
 	title: {
-		text: "Grafik Pegawai dengan Penjualan Terbanyak($)"
+		text: "Grafik Metode Pengiriman yang Paling Banyak Digunakan"
 	},
 	data: [{
-		type: "doughnut",
-		indexLabel: "{symbol} - {y}",
-		yValueFormatString: "#,##0.0\"\"",
-		showInLegend: true,
-		legendText: "{label} : {y}",
+		type: "bar",
+		indexLabel: "{label} - {y}",
+		yValueFormatString: "#,##0",
 		dataPoints: <?php echo json_encode($test, JSON_NUMERIC_CHECK); ?>
 	}]
 });

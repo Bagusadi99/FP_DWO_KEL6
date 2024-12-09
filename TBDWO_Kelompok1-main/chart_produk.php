@@ -38,7 +38,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		title: "Jumlah Produk"
 	},
 	data: [{
-		type: "column",
+		type: "bar",
 		yValueFormatString: "#,##0.## pcs",
 		dataPoints: <?php echo json_encode($test, JSON_NUMERIC_CHECK); ?>
 	}]

@@ -36,7 +36,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		title: "Total Penjualan"
 	},
 	data: [{
-		type: "area",
+		type: "bar",
 		dataPoints: <?php echo json_encode($test, JSON_NUMERIC_CHECK); ?>
 	}]
 });

@@ -1,4 +1,5 @@
 <main>
+                    <h1></h1>
                     <div class="container-fluid px-4">
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
@@ -81,7 +82,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		title: "Total Pendapatan($)"
 	},
 	data: [{
-		type: "column",
+		type: "bar",
 		yValueFormatString: "#,##0.##",
 		dataPoints: <?php echo json_encode($test, JSON_NUMERIC_CHECK); ?>
 	}]
