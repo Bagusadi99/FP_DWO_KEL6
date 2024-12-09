@@ -1,12 +1,8 @@
 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Welcome!!</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Dashboard Kelompok 1</li>
-                        </ol>
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
+                                <div class="card bg-secondary text-white mb-4">
                                     <div class="card-body">Penjualan Pegawai Tertinggi</div>
                                     <div class="card-body">$162.324,4</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
@@ -16,7 +12,7 @@
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
-                                <div class="card bg-warning text-white mb-4">
+                                <div class="card bg-secondary text-white mb-4">
                                     <div class="card-body">Tahun Penjualan Tertinggi</div>
                                     <div class="card-body">2001</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
@@ -26,7 +22,7 @@
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
-                                <div class="card bg-success text-white mb-4">
+                                <div class="card bg-secondary text-white mb-4">
                                     <div class="card-body">Total Produk</div>
                                     <div class="card-body">211</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
@@ -36,7 +32,7 @@
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
-                                <div class="card bg-danger text-white mb-4">
+                                <div class="card bg-secondary text-white mb-4">
                                     <div class="card-body">Total Vendor</div>
                                     <div class="card-body">104</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
@@ -79,7 +75,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	theme: "light2",
 	title:{
-		text: "Grafik Produk dengan Total Pendapatan Terbanyak"
+		text: "Grafik Total Pendapatan Terbanyak"
 	},
 	axisY: {
 		title: "Total Pendapatan($)"
