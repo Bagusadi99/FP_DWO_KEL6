@@ -5,7 +5,7 @@
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-secondary text-white mb-4">
                                     <div class="card-body">Penjualan Pegawai Tertinggi</div>
-                                    <div class="card-body">$162.324,4</div>
+                                    <div class="card-body"></div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                         <a class="small text-white stretched-link" href="?page=chart_pegawai">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -15,7 +15,7 @@
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-secondary text-white mb-4">
                                     <div class="card-body">Tahun Penjualan Tertinggi</div>
-                                    <div class="card-body">2001</div>
+                                    <div class="card-body"></div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                         <a class="small text-white stretched-link" href="?page=chart_penjualan">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -25,7 +25,7 @@
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-secondary text-white mb-4">
                                     <div class="card-body">Total Produk</div>
-                                    <div class="card-body">211</div>
+                                    <div class="card-body"></div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                         <a class="small text-white stretched-link" href="?page=data_produk">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -35,7 +35,7 @@
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-secondary text-white mb-4">
                                     <div class="card-body">Total Vendor</div>
-                                    <div class="card-body">104</div>
+                                    <div class="card-body"></div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                         <a class="small text-white stretched-link" href="?page=data_vendor">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -51,7 +51,7 @@
 <h1></h1>
 <h1></h1>
 
-                <?php
+<?php
 $link = mysqli_connect("localhost", "root", "");
 mysqli_select_db($link, "fpdwo");
 

@@ -34,6 +34,9 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	title:{
 		text: "Grafik Produk dengan Penjualan Terbanyak"
 	},
+	axisX: {
+		title: "Nama Produk"
+	},
 	axisY: {
 		title: "Jumlah Produk"
 	},
